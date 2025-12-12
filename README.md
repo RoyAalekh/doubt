@@ -139,6 +139,33 @@ def safe_sum(values):
 result = safe_sum.check([1, 2, 3, 4, 5])
 result.show()
 ```
+### Doubt Analysis: `safe_sum()`
+
+
+**Baseline Output:** `15`
+
+**Tested 5 scenarios**
+
+- Crashes: 0
+- Silent Changes: 5
+- Type Changes: 0
+- No Impact: 0
+
+### Concerning Scenarios
+
+| Argument | Location | Impact  | Details |
+|---------|----------|---------|---------|
+| values  | `[0]`    | Changed | -6.7%   |
+| values  | `[1]`    | Changed | -13.3%  |
+| values  | `[2]`    | Changed | -20.0%  |
+| values  | `[3]`    | Changed | -26.7%  |
+| values  | `[4]`    | Changed | -33.3%  |
+
+### Suggestions
+
+- Document assumptions about data completeness
+- Add explicit handling for missing values
+- Consider raising errors instead of silently changing output
 
 This reveals how the output changes as values are removed, even though the function does not crash.
 
