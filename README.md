@@ -1,3 +1,5 @@
+![CI](https://github.com/RoyAalekh/doubt/actions/workflows/ci.yml/badge.svg)
+
 # doubt
 
 Discover hidden assumptions about data completeness in Python functions.
@@ -91,6 +93,35 @@ Run the analysis explicitly:
 result = calculate_mean.check([1, 2, 3, 4, 5])
 result.show()
 ```
+
+Doubt Analysis: calculate_mean()
+
+======================================================================
+
+Baseline Output: 3.0
+
+**Tested 5 scenarios**
+
+-   Crashes: 5
+-   Silent Changes: 0
+-   Type Changes: 0
+-   No Impact: 0
+
+Concerning Scenarios:
+
+| Argument | Location | Impact | Details   |
+|----------|----------|--------|-----------|
+| values   | \[0\]    | Crash  | TypeError |
+| values   | \[1\]    | Crash  | TypeError |
+| values   | \[2\]    | Crash  | TypeError |
+| values   | \[3\]    | Crash  | TypeError |
+| values   | \[4\]    | Crash  | TypeError |
+
+Suggestions:
+
+-   Add defensive checks for None/NaN values
+-   Consider using try-except blocks
+-   Problematic arguments: values
 
 ------------------------------------------------------------------------
 
