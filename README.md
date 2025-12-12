@@ -1,5 +1,9 @@
 ![CI](https://github.com/RoyAalekh/doubt/actions/workflows/ci.yml/badge.svg)
 
+## Example output
+
+![doubt demo](assets/doubt-demo.gif)
+
 # doubt
 
 Discover hidden assumptions about data completeness in Python functions.
